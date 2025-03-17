@@ -1,0 +1,70 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(27, 27, 27);
+}
+
+#logo {
+    position: absolute;
+    left: 25px;
+    top: 1px;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    color: #8d8383;
+    letter-spacing: 2px;
+}
+
+a {
+    color: rgb(167, 143, 143);
+    transition: 0.3s;
+}
+a:hover {color: white;}
+
+#heading {
+    color: red;
+}
+
+.btn {
+    background-color: #f4511e;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.btn:hover {background-color: #3e8e41}
+
+label {
+    color: white;
+    padding-right: 20px;
+}
+
+.box_input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=radio] {
+    margin: 20px 0;
+}
