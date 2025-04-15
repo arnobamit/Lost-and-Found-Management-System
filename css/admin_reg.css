@@ -29,7 +29,7 @@ a {
 a:hover {color: white;}
 
 #heading {
-    color: red;
+    color: rgb(219, 116, 116);
 }
 
 .btn {
@@ -68,3 +68,13 @@ label {
 input[type=radio] {
     margin: 20px 0;
 }
+
+
+.error {
+    color: #ff6b6b;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 10px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+      
