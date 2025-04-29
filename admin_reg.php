@@ -8,7 +8,7 @@
         <h2 id="logo">Lost & Found</h2>
         <center>
             <h1 id="heading">Admin Registration</h1>
-            <form id="adminForm" action="admin_action.php" method="post" onsubmit="return validateForm()">
+            <form id="adminForm" action="admin_action.php" method="post">
                 <table>
                     <tr>
                         <td><label for="firstname">First Name:</label></td>
