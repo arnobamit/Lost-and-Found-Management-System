@@ -73,7 +73,7 @@
                     </tr>
                 </table><br>
 
-                <button type="submit" class="btn">Register</button>
+                <button type="submit" name="Submit" class="btn">Register</button>
                 <button type="reset" class="btn">Clear All</button>
             </form>
 

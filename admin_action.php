@@ -1,61 +1,61 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset($_REQUEST['Submit'])) {
     $errors = [];
 
-    if (empty($_POST['firstname'])) {
+    if (empty($_REQUEST['firstname'])) {
         $errors[] = "First Name is required.";
-    }else {
-        $firstname = htmlspecialchars(trim($_POST['firstname']));
+    } else {
+        $firstname = htmlspecialchars(trim($_REQUEST['firstname']));
     }
 
-    if (empty($_POST['lastname'])) {
+    if (empty($_REQUEST['lastname'])) {
         $errors[] = "Last Name is required.";
     } else {
-        $lastname = htmlspecialchars(trim($_POST['lastname']));
+        $lastname = htmlspecialchars(trim($_REQUEST['lastname']));
     }
 
-    if (empty($_POST['username'])) {
+    if (empty($_REQUEST['username'])) {
         $errors[] = "Username is required.";
     } else {
-        $username = htmlspecialchars(trim($_POST['username']));
+        $username = htmlspecialchars(trim($_REQUEST['username']));
     }
 
-    if (empty($_POST['email'])) {
+    if (empty($_REQUEST['email'])) {
         $errors[] = "Email is required.";
-    } elseif (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+    } elseif (!filter_var($_REQUEST['email'], FILTER_VALIDATE_EMAIL)) {
         $errors[] = "Invalid email format.";
     } else {
-        $email = htmlspecialchars(trim($_POST['email']));
+        $email = htmlspecialchars(trim($_REQUEST['email']));
     }
 
-    if (empty($_POST['password'])) {
+    if (empty($_REQUEST['password'])) {
         $errors[] = "Password is required.";
-    } elseif (strlen($_POST['password']) < 6) {
+    } elseif (strlen($_REQUEST['password']) < 6) {
         $errors[] = "Password must be at least 6 characters.";
     } else {
-        $password = $_POST['password'];
+        $password = $_REQUEST['password'];
     }
 
-    if (empty($_POST['adminCode'])) {
+    if (empty($_REQUEST['adminCode'])) {
         $errors[] = "Admin Code is required.";
     } else {
-        $adminCode = intval($_POST['adminCode']);
+        $adminCode = intval($_REQUEST['adminCode']);
     }
 
-    if (!empty($_POST['website'])) {
-        if (!filter_var($_POST['website'], FILTER_VALIDATE_URL)) {
+    if (!empty($_REQUEST['website'])) {
+        if (!filter_var($_REQUEST['website'], FILTER_VALIDATE_URL)) {
             $errors[] = "Invalid website URL.";
         } else {
-            $website = htmlspecialchars(trim($_POST['website']));
+            $website = htmlspecialchars(trim($_REQUEST['website']));
         }
     } else {
         $website = "";
     }
 
-    if (empty($_POST['gender'])) {
+    if (empty($_REQUEST['gender'])) {
         $errors[] = "Gender is required.";
     } else {
-        $gender = htmlspecialchars($_POST['gender']);
+        $gender = htmlspecialchars($_REQUEST['gender']);
     }
 
     if (!empty($errors)) {
