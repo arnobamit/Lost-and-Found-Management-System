@@ -1,0 +1,46 @@
+body {
+    background-color: #1e1e1e;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+
+.profile-box {
+    background-color: #2e2e2e;
+    padding: 30px;
+    border-radius: 15px;
+    display: inline-block;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+a {
+    color: #f4511e;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+.center {
+    text-align: center;
+}
+
+.btn {
+    background-color: #f4511e;
+    color: white;
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn:hover {
+    background-color: #d63d0b;
+}

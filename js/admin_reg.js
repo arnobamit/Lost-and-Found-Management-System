@@ -6,7 +6,6 @@ function validateForm() {
     document.getElementById("unameError").innerHTML = "";
     document.getElementById("emailError").innerHTML = "";
     document.getElementById("passwordError").innerHTML = "";
-    document.getElementById("adminCodeError").innerHTML = "";
     document.getElementById("websiteError").innerHTML = "";
     document.getElementById("genderError").innerHTML = "";
 
@@ -15,7 +14,6 @@ function validateForm() {
     const uname = document.getElementById("username").value.trim();
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value;
-    const adminCode = document.getElementById("adminCode").value.trim();
     const website = document.getElementById("website").value.trim();
     const gender = document.getElementsByName('gender');
 
@@ -45,11 +43,6 @@ function validateForm() {
     }
     else if (password.length < 6) {
         document.getElementById("passwordError").innerHTML = "Password must be at least 6 characters.";
-        isValid = false;
-    }
-
-    if (adminCode == "") {
-        document.getElementById("adminCodeError").innerHTML = "Admin Code is required.";
         isValid = false;
     }
 
