@@ -30,9 +30,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
         }
 
         if (checkLogin($conn, $username, $password)) {
-            $loginMessage = "<div style='margin: 20px auto; padding: 20px; background: rgb(33, 39, 30); color: #3c763d; border: 1px solid #3c763d; border-radius: 5px; width: 70%;'><h2>Login Successful</h2></div>";
-            
             $_SESSION['admin_username'] = $username;
+
+            if (isset($_POST['remember_me'])) {
+                setcookie("admin_username", $username, time() + (86400 * 7), "/");
+            } else {
+                if (isset($_COOKIE['admin_username'])) {
+                    setcookie("admin_username", "", time() - 3600, "/");
+                }
+            }
+
             header("Location: ../view/admin_profile.php");
             exit();
         } else {

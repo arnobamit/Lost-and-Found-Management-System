@@ -15,11 +15,12 @@
                 <tr>
                     <td><label for="username">Username:</label></td>
                     <td>
-                        <input type="text" id="username" class="box_input" name="username" value="<?= htmlspecialchars($username) ?>"><br>
+                        <input type="text" id="username" class="box_input" name="username" value="<?= htmlspecialchars($username ?: ($_COOKIE['admin_username'] ?? '')) ?>"><br>
                         <span class="error"><?= $usernameError ?></span>
                     </td>
                     
                 </tr>
+
                 <tr>
                     <td><label for="password">Password:</label></td>
                     <td>
@@ -27,10 +28,18 @@
                         <span class="error"><?= $passwordError ?></span>
                     </td>
                 </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <label><input type="checkbox" name="remember_me" <?php if(isset($_COOKIE['admin_username'])) echo "checked"; ?>> Remember Me</label>
+                    </td>
+                </tr>
+
             </table><br>
-            <div class="buttons">
+            <div class="links">
                 <button type="submit" name="login" class="btn">Login</button><br><br>
-                <a href="admin_reg.php">Don't have an account?</a>
+                <a href="admin_reg.php">Don't have an account?</a><br><br>
+                <a href="admin_forgot_pass.php" class="forgot-link">Forgot Password?</a>
             </div>
         </form>
     </div>
