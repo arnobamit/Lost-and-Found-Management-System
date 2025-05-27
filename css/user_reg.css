@@ -1,0 +1,119 @@
+/* user_reg.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+    height: 100vh;
+}
+
+#logo {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 34px;
+    font-weight: bold;
+    color: #5d0b7d;
+}
+
+.firstdiv {
+    background-color: white;
+    margin-top: 80px;
+    padding: 30px 40px;
+    border-radius: 10px;
+    width: 460px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.field table {
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 6px;
+    color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #5d0b7d;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.submit {
+    background-color: #5d0b7d;
+    color: white;
+}
+
+.submit:hover {
+    background-color: #4a0863;
+}
+
+.reset {
+    background-color: #ccc;
+    color: #333;
+}
+
+.reset:hover {
+    background-color: #aaa;
+}
+
+.error {
+    color: red;
+    font-size: 0.85em;
+    margin-bottom: 10px;
+    display: block;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #3333cc;
+}
+
+a:hover {
+    text-decoration: underline;
+}

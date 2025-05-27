@@ -1,0 +1,92 @@
+/* user_login.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    height: 100vh;
+}
+
+#logo {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 34px;
+    font-weight: bold;
+    color: #5d0b7d;
+}
+
+.content {
+    background-color: white;
+    margin-top: 100px;
+    padding: 30px 40px;
+    border-radius: 10px;
+    width: 420px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 8px;
+    vertical-align: top;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #5d0b7d;
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: #5d0b7d;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #4a0863;
+}
+
+a {
+    text-decoration: none;
+    color: #3333cc;
+    font-size: 14px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: red;
+    font-size: 0.85em;
+    display: block;
+}

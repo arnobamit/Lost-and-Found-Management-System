@@ -1,6 +1,6 @@
 <?php
 function createCon() {
-    return mysqli_connect("localhost", "root", "12345", "lost&found");
+    return mysqli_connect("localhost", "root", "", "lost&found");
 }
 
 function insertData($conn, $fname, $lname, $username, $email, $password, $website, $file, $gender) {
