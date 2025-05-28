@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $fileError = "File is required";
         $errors[] = $fileError;
     } else {
-        if (move_uploaded_file($_FILES["myfile"]["tmp_name"], "../uploads/" . $_FILES["myfile"]["name"])) {
+        if (move_uploaded_file($_FILES["myfile"]["tmp_name"], "../uploads/admins/" . $_FILES["myfile"]["name"])) {
             $file = "File uploaded";
         } else {
             $fileError = "File upload failed";

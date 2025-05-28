@@ -6,6 +6,27 @@ body {
     padding: 50px;
 }
 
+#logo {
+    position: absolute;
+    left: 25px;
+    top: 1px;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    color: #8d8383;
+    letter-spacing: 2px;
+}
+
+.profile-pic {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 150px;
+    border-radius: 20%;
+    height: auto;
+}
+
+
+
 .profile-box {
     background-color: #2e2e2e;
     padding: 30px;
@@ -32,6 +53,7 @@ a:hover {
     background-color: #f4511e;
     color: white;
     margin-top: 20px;
+    margin-right: 10px;
     padding: 10px 20px;
     text-decoration: none;
     font-size: 16px;
