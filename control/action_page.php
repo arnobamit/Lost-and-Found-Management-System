@@ -24,6 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
+
+
     if (empty($_POST["email"])) {
         $emailErr = "Email is required";
         $errors[] = $emailErr;
@@ -34,6 +36,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $errors[] = $emailErr;
         }
     }
+
+
 
     if (empty($_POST["phone"])) {
         $phoneErr = "Phone number is required";
@@ -46,12 +50,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
+
+
     if (empty($_POST["username"])) {
         $usernameErr = "Username is required";
         $errors[] = $usernameErr;
     } else {
         $username = test_input($_POST["username"]);
     }
+
+
 
     if (empty($_POST["password"])) {
         $passwordErr = "Password is required";
@@ -73,10 +81,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     if (isset($_FILES['file'])) {
-    move_uploaded_file($_FILES['file']['tmp_name'], '../uploads/' . $_FILES['file']['name']);
+    move_uploaded_file($_FILES['file']['tmp_name'], '../uploads/users/' . $_FILES['file']['name']);
     $file = "File uploaded!";
     }
-
 
     if (empty($_POST["user_type"])) {
         $user_typeErr = "User type is required";
@@ -100,7 +107,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if (empty($errors)) {
-        // Include DB logic here
         require_once("../model/db2.php");
         $conn = createCon();
 
@@ -108,10 +114,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             die("Connection failed: " . mysqli_connect_error());
         }
 
+        $uploadedFileName = $_FILES["file"]["name"];
+
         $insertSuccess = insertUser(
-            $conn, $fullname, $email, $phone, $username,
-            $password, $file, $user_type, $date, $address
-        );
+            $conn, $fullname, $email, $phone, $username, $password, $uploadedFileName, $user_type, $date, $address);
 
         if ($insertSuccess) {
             $successMessage = "
@@ -124,7 +130,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <p><strong>User Type:</strong> $user_type</p>
                 <p><strong>Registration Date:</strong> $date</p>
                 <p><strong>Address:</strong> $address</p>
-                <p><strong>Uploaded File:</strong> $file</p>
+                <p><strong>Uploaded Photo:</strong> $file</p>
             </div>";
         } else {
             $successMessage = "<p style='color:red;'>Database insert failed: " . mysqli_error($conn) . "</p>";
